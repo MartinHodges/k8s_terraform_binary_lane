@@ -1,0 +1,10 @@
+[k8s_master]
+${master_ip}
+
+[k8s_node]
+%{ for addr in node_ips ~}
+${addr}
+%{ endfor ~}
+
+[vpn]
+${vpn_ip}
